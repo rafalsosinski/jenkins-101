@@ -13,7 +13,9 @@ pipeline {
                 echo "Building.."
                 sh '''
                 cd myapp
-                pip install -r requirements.txt --ignore-installed --user
+                python3 -m venv /path/to/venv
+                . /path/to/venv/bin/activate
+                pip install -r requirements.txt
                 '''
             }
         }
